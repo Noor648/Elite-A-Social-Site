@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>send-outline</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.4" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Home" transform="translate(-388.000000, -610.000000)" stroke="#000000">
+            <g id="post" transform="translate(317.000000, 125.000000)">
+                <g id="send-outline" transform="translate(72.000000, 486.000000)">
+                    <path d="M19.5669643,10.7612369 L0.498214286,19.9124057 C0.390558851,19.9712813 0.264562315,19.9624104 0.163792495,19.8888606 C0.0630226755,19.8153108 0.00131232188,19.6871782 0,19.5487693 L0,13.6625356 C4.09335661e-07,13.4628629 0.122033801,13.2914129 0.290625,13.2542239 L11.3450893,10.8126655 C12.1200893,10.6417564 12.1200893,9.35032779 11.3450893,9.1794187 L0.290178571,6.73786026 C0.121929886,6.70048876 0.000173804605,6.52938315 0,6.33006805 L0,0.446431687 C0,0.148249869 0.2625,-0.0865553259 0.498214286,0.0308472715 L19.5669643,9.23448364 C19.8289663,9.36579168 19.9987028,9.66591058 19.9987028,9.99786026 C19.9987028,10.3298099 19.8289663,10.6299288 19.5669643,10.7612369 Z" id="Path"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

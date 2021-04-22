@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: inherit;
+}
+body {
+    font-family: "DM Mono", sans-serif;
+    background: #FFF;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23cccccc' fill-opacity='0.35'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+#container {
+    display: grid;
+    grid-template-columns: 3.5fr 9fr;
+    grid-template-areas: "sidebar main";
+    
+    height: 100vh;
+    width: 90vw;
+
+    max-height: 90vh;
+    max-width: 900px;
+    margin: auto;
+    margin-top: 5vh;
+
+
+    position: relative;
+
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    border: solid 1px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+
+    background: #FFF;
+
+    overflow: hidden;
+}
+#main {
+    grid-area: main;
+    position: relative;
+}
+#new-message {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+}
+#new-message input {
+    width: 100%;
+    padding: 10px 15px;
+    border: solid 1px #e0e0e0;
+    /* background: #f0f0f0; */
+    font-size: 14px;
+    outline: none;
+    border-radius: 50px;
+}
+
+#new-message input:hover {
+    border-color: #BBB;
+}
+#new-message input:focus {
+    border-color: #AAA;
+}
+
+
+
+#sidebar {
+    grid-area: sidebar;
+    height: 100%;
+    /* background: #fafafa; */
+    /* box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); */
+    border-right: solid 1px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 5;
+}
+#sidebar > ul{
+    list-style: none;
+    padding-top: 40px;
+    position: relative;
+    z-index: 27;
+    margin-right: -1px;
+}
+#sidebar > ul > li:first-of-type{
+    border-top-color: transparent;
+}
+#sidebar > ul > li:last-of-type{
+    border-bottom-color: transparent;
+}
+#sidebar > ul > li{
+    padding: 10px 20px;
+    border-top: solid 1px #f0f0f0;
+    border-bottom: solid 1px #f0f0f0;
+    margin-top: -1px;
+    cursor: pointer;
+    color: #999;
+    z-index: 2;
+    position: relative;
+}
+
+#sidebar > ul > li.active{
+    z-index: 5;
+    border-top-color: rgba(0, 0, 0, 0.15);
+    border-bottom-color: rgba(0, 0, 0, 0.15);
+}
+#sidebar > ul > li:hover{
+    color: #202020;
+}
+#sidebar > ul > li.active{
+    /* border-right: solid 1px #FFF; */
+    background: #FFF;
+    font-weight: 500;
+    color: #404040;
+}
+
+
+
+
+#messages-list {
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 60px;
+    overflow-y: auto;
+    padding: 30px 0;
+    padding-top: 40px;
+    /* background: #f00; */
+}
+
+.Message {
+    padding: 0px 50px;
+    display: flex;
+    margin-bottom: 8px;
+    /* border-bottom: solid 1px #f0f0f0; */
+}
+.Message > .inner::before {
+    content: '';
+    /* border-top: solid 10px transparent; */
+    border-bottom: solid 12px transparent;
+    border-right: solid 12px #3d5370;
+    top: 0px;
+    left: -8px;
+    position: absolute;
+}
+.Message.me > .inner::before {
+    border-right: none;
+    border-left: solid 12px #f0f0f0;
+    left: auto;
+    right: -8px;
+}
+.Message.me > .inner {
+    border-top-right-radius: 0;
+}
+.Message.other > .inner {
+    border-top-left-radius: 0;
+}
+
+
+.Message > .inner {
+    max-width: 300px;
+    background: #f0f0f0;
+    display: inline-block;
+    border-radius: 4px;
+    padding: 8px 15px;
+    position: relative;
+}
+.Message > .inner > p {
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.3em;
+    word-wrap: break-word;
+    /* margin-top: 10px; */
+}
+.Message .author {
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin: 0;
+    display: block;
+    line-height: 1em;
+}
+
+.Message.me {
+    justify-content: flex-end;
+}
+.Message.me > .inner > p {
+    color: #404040;
+}
+
+.Message.other > .inner {
+    background: #3d5370;
+}
+.Message.other > .inner > p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+
+
+
+.ActiveUser {
+    padding-top: 40px;
+    padding-left: 20px;
+    /* background: #fafafa; */
+}
+.ActiveUser > h4 {
+    font-size: 24px;
+    margin: 0;
+    width: 10px;
+    font-weight: 500;
+    color: #202020;
+    line-height: 1.6em;
+    text-decoration: underline;
+    /* text-align: center; */
+}
