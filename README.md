@@ -1,5 +1,6 @@
 # Elite-A-Social-Site
 A website on which you can get registered. Allows registered users to create profiles, upload photos and statuses, send messages and keep in touch with friends, family and colleagues.
+
 To learn more about the project check,
 (./Project Video/ProjectPreview.mp4) and (./Report/PROJECT-REPORT.PDF)
 
