@@ -11,7 +11,7 @@ XAMPP: https://www.apachefriends.org/download.html
 
 WAMPP: https://sourceforge.net/projects/wampserver/
 
->>Run Code/signin.php page at first to make it work in a sequentional order<<
+>>Run Code/signin.php page at first to make it work in a sequentional order
 
 
 
